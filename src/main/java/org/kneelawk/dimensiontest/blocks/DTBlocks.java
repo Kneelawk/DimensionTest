@@ -18,7 +18,11 @@ public class DTBlocks {
 	public static HashMap<String, Block> blocks = new HashMap<String, Block>();
 
 	public static void init() {
-		addBlock(new DTBlockWMeta(Material.rock, 3), "blockCactosine", CreativeTabs.tabBlock, DTItemBlock.class);
+		addBlock(new DTBlockWMeta(Material.rock, 3), "blockCactosine",
+				CreativeTabs.tabBlock, DTItemBlock.class);
+		addBlock(new DTBlock(Material.glass), "blockCactosineLamp",
+				CreativeTabs.tabBlock, "blockCactosineLamp").setStepSound(
+				Block.soundTypeGlass).setLightLevel(1);
 	}
 
 	public static Block addBlock(Block block, String name, CreativeTabs tab) {
